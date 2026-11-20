@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>About Us – DUD Solutions</title>
+    <meta name="description" content="DUD Solutions is an independent technology and design company building digital experiences that move businesses forward.">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+    <!-- Fonts: Manrope (headings) and DM Sans (body text) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Apply the saved light/dark choice before the page paints, to avoid a flash -->
+    <script>
+      try {
+        var savedTheme = localStorage.getItem("dud-theme");
+        if (savedTheme === "dark" || savedTheme === "light") {
+          document.documentElement.setAttribute("data-theme", savedTheme);
+        }
+      } catch (error) {}
+    </script>
+  </head>
+
+  <!-- DUD Solutions: About Us page -->
+  <body>
+
+  <!-- Site header -->
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" aria-label="DUD Solutions home" href="index.html"><svg viewBox="0 0 100 72"><path d="M0 24L22 10V58L0 44ZM6 28V40L16 46V22Z" fill-rule="evenodd"/><path d="M100 24L78 10V58L100 44ZM94 28V40L84 46V22Z" fill-rule="evenodd"/><path d="M28 4L36 0V50L50 59L64 50V0L72 4V58L50 72L28 58Z"/></svg><span><b>DUD</b> SOLUTIONS</span></a>
+      <button id="menu-toggle" class="menu-toggle" aria-label="Menu">☰</button>
+      <nav id="site-nav">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="services.html">Services</a>
+        <a class="nav-link" href="projects.html">Projects</a>
+        <a class="nav-link is-active" aria-current="page" href="about.html">About Us</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Switch theme" type="button"></button>
+    </div>
+  </header>
+  <main>
+
+    <!-- Hero -->
+    <section class="hero hero--centered">
+      <div class="container">
+        <div class="eyebrow fade-in" style="color:#8e80ff">About DUD</div>
+        <h1 class="fade-in" style="animation-delay:.1s">Building digital experiences that move businesses forward.</h1>
+        <p class="fade-in" style="animation-delay:.2s">We’re an independent technology and design company for organizations ready to imagine more, and build it brilliantly.</p>
+      </div>
+    </section>
+
+    <!-- We close the gap between imagination and execution. -->
+    <section style="background:var(--card)">
+      <div class="container two-column">
+        <div>
+          <div class="eyebrow">Our story</div>
+          <h2>We close the gap between imagination and execution.</h2>
+        </div>
+        <div>
+          <p class="intro-text">DUD Solutions was built on a simple belief: the best digital work happens when creativity and technology are never separated.</p>
+          <p>Our team brings thinkers, designers and engineers together to solve meaningful problems. We stay curious, work openly and measure our success by the progress we create for our partners.</p>
+        </div>
+      </div>
+    </section>
+    <section class="section--tinted">
+      <div class="container mission-vision">
+        <div class="info-card">
+          <div class="icon-box"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg></div>
+          <small>Our mission</small>
+          <h3>Make ambitious digital ideas possible.</h3>
+          <p>To design and develop thoughtful solutions that help businesses operate smarter, connect deeper and grow with confidence.</p>
+        </div>
+        <div class="info-card">
+          <div class="icon-box"><svg class="icon" viewBox="0 0 24 24"><path d="M5 19c0-3 1-4 3-5m8-9c3 0 4 1 4 4-1 5-5 8-9 9l-4-4c1-4 4-8 9-9zM8 16l-3 3"/></svg></div>
+          <small>Our vision</small>
+          <h3>Shape a more inspired digital future.</h3>
+          <p>To be a trusted creative technology partner for businesses making a positive and lasting mark on the world.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values built into the work. -->
+    <section style="background:var(--card)">
+      <div class="container">
+        <div class="eyebrow">What guides us</div>
+        <h2>Values built into the work.</h2>
+        <p class="section-subtitle" style="margin-bottom:48px">These principles shape how we think, make and collaborate.</p>
+        <div class="values-grid">
+          <div class="value-item">
+            <small>01</small>
+            <h3>Imagine boldly</h3>
+            <p>We challenge the expected and create room for better possibilities.</p>
+          </div>
+          <div class="value-item">
+            <small>02</small>
+            <h3>Make with purpose</h3>
+            <p>Every detail earns its place and every decision serves an outcome.</p>
+          </div>
+          <div class="value-item">
+            <small>03</small>
+            <h3>Stay relentlessly curious</h3>
+            <p>We keep learning, testing and asking the questions that move work forward.</p>
+          </div>
+          <div class="value-item">
+            <small>04</small>
+            <h3>Build trust</h3>
+            <p>Open communication, honest thinking and shared ownership are non-negotiable.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to action -->
+    <section class="cta-band">
+      <div class="container">
+        <div class="eyebrow">Have an idea?</div>
+        <h2>Let’s build something remarkable together.</h2>
+        <p>Tell us where you want to go. We’ll help you design the path and build what’s next.</p>
+        <a class="btn btn--light" href="contact.html">Start a conversation <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="index.html"><svg viewBox="0 0 100 72"><path d="M0 24L22 10V58L0 44ZM6 28V40L16 46V22Z" fill-rule="evenodd"/><path d="M100 24L78 10V58L100 44ZM94 28V40L84 46V22Z" fill-rule="evenodd"/><path d="M28 4L36 0V50L50 59L64 50V0L72 4V58L50 72L28 58Z"/></svg><span><b>DUD</b> SOLUTIONS</span></a>
+          <p style="margin-top:18px;max-width:300px">We imagine, create and inspire digital solutions that move ambitious businesses forward.</p>
+          <div class="social-links">
+            <a aria-label="Network" href="contact.html">◈</a>
+            <a aria-label="Dribbble" href="contact.html">◎</a>
+            <a aria-label="Video" href="contact.html">▶</a>
+          </div>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="projects.html">Projects</a>
+          <a href="about.html">About Us</a>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <a href="services.html">Product design</a>
+          <a href="services.html">Web development</a>
+          <a href="services.html">AI solutions</a>
+          <a href="services.html">Automation</a>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <a href="contact.html">hello@dudsolutions.com</a>
+          <p>Available worldwide</p>
+        </div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 DUD Solutions. All rights reserved.</span><span>Imagine • Create • Inspire</span></div>
+    </div>
+  </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
