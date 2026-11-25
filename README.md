@@ -16,8 +16,13 @@ dud-solutions/
 ├── js/
 │   └── main.js        Theme toggle, mobile menu, project filter, contact form
 └── assets/
+    team
+        member-01.jpg
+        member-02.jpg
+        member-03.jpg 
     ├── logo.svg
     └── favicon.svg
+    
 ```
 
 ## Run it
