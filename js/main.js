@@ -129,9 +129,31 @@
       });
     });
   }
+  /* ---------------------------------------------------------------------
+    4. About page team cards: accessible 3D flip interaction
+   --------------------------------------------------------------------- */
+
+  var teamCards = document.querySelectorAll(".team-card");
+
+  teamCards.forEach(function (card) {
+    function flipCard() {
+      var isFlipped = card.classList.toggle("is-flipped");
+      card.setAttribute("aria-pressed", String(isFlipped));
+    }
+
+    card.addEventListener("click", flipCard);
+
+    card.addEventListener("keydown", function (event) {
+     if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+       flipCard();
+      }
+    });
+ });
+
 
   /* ---------------------------------------------------------------------
-     4. Contact form
+     5. Contact form
      --------------------------------------------------------------------- */
 
   var contactForm = document.getElementById("contact-form");
