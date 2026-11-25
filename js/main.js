@@ -130,27 +130,29 @@
     });
   }
   /* ---------------------------------------------------------------------
-    4. About page team cards: accessible 3D flip interaction
+     4. About page team cards: flip between photo (front) and details (back)
+     Clicking anywhere on a card, or using its Flip / Back button, flips it.
+     Links inside the card (LinkedIn, GitHub, email...) work normally and do
+     not flip it. The hidden face is made inert so keyboard and screen-reader
+     users only reach what is visible.
    --------------------------------------------------------------------- */
 
-  var teamCards = document.querySelectorAll(".team-card");
+  document.querySelectorAll(".team-card").forEach(function (card) {
+    var front = card.querySelector(".team-card-front");
+    var back = card.querySelector(".team-card-back");
 
-  teamCards.forEach(function (card) {
-    function flipCard() {
+    card.addEventListener("click", function (event) {
+      if (event.target.closest("a")) return;
+
       var isFlipped = card.classList.toggle("is-flipped");
-      card.setAttribute("aria-pressed", String(isFlipped));
-    }
+      front.inert = isFlipped;
+      back.inert = !isFlipped;
 
-    card.addEventListener("click", flipCard);
-
-    card.addEventListener("keydown", function (event) {
-     if (event.key === "Enter" || event.key === " ") {
-        event.preventDefault();
-       flipCard();
-      }
+      // Keep keyboard focus on the face that is now showing.
+      var visibleButton = (isFlipped ? back : front).querySelector(".team-flip-btn");
+      if (visibleButton && event.target.closest(".team-flip-btn")) visibleButton.focus({ preventScroll: true });
     });
- });
-
+  });
 
   /* ---------------------------------------------------------------------
      5. Contact form
