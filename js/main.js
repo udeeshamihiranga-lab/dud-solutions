@@ -200,7 +200,7 @@
         "Service: " + service + "\n\n" +
         "Project details:\n" + message;
 
-      var mailtoLink = "mailto:udeeshamihiranga@gmail.com?subject=" +
+      var mailtoLink = "mailto:solutiondud@gmail.com?subject=" +
         encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
 
       window.location.href = mailtoLink;
